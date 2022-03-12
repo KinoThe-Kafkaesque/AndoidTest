@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="20dp"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="88dp"
+        android:layout_height="98dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="31dp"
+        app:srcCompat="@mipmap/pizza1" />
+
+    <TextView
+        android:id="@+id/nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/photo"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@+id/photo"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/quantite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/nom"
+        android:layout_alignBottom="@+id/photo"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="-3dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/idf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/quantite"
+        android:layout_alignStart="@+id/nom"
+        android:text="TextView"
+        android:visibility="invisible" />
+</RelativeLayout>
