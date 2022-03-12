@@ -9,6 +9,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.constraintlayout.utils.widget.ImageFilterView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,7 +52,7 @@ import two.one.showcase.service.ProduitService;
             TextView idf = convertView.findViewById(R.id.idf);
             TextView nom = convertView.findViewById(R.id.nom);
             TextView quantite = convertView.findViewById(R.id.quantite);
-            ImageView photo = convertView.findViewById(R.id.photo);
+            ImageFilterView photo = convertView.findViewById(R.id.image);
 
             idf.setText(pizzas.get(position).getId()+"");
             nom.setText(pizzas.get(position).getName());

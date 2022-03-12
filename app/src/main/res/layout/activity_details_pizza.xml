@@ -1,60 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#72FF9800"
     android:orientation="vertical"
-    android:paddingBottom="20dp"
     android:paddingTop="20dp"
+    android:paddingBottom="20dp"
     tools:context=".DetailsPizza">
+
 
     <ImageView
         android:id="@+id/photo"
-        android:layout_width="166dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center_horizontal"
-        android:paddingBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/desc"
+        android:layout_width="177dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@mipmap/pizza1" />
 
     <TextView
         android:id="@+id/nom"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
-        android:text="TextView" />
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photo" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="4dp"
         android:padding="10dp"
         android:text="@string/description"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp">
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nom" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="314dp"
+        android:layout_height="302dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
-
-            <TextView
-                android:id="@+id/desc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-        </LinearLayout>
-
-    </ScrollView>
-
-</LinearLayout><!---->
+</androidx.constraintlayout.widget.ConstraintLayout><!---->
